@@ -12,8 +12,25 @@ for (i = 10; i >= 0; i--){
 //   :):):)
 //   :):):):)
 //   :):):):):)
-const symbol = ':)'
-    for 
+
+const symbol = ':)';
+let result = '';
+
+for (let i = 0; i < 5; i++) {
+    result += symbol;
+
+    console.log(result);
+}
 
 //   Для Оксаны и ее друзей: также реализовать циклом while
 //   Рекоммендация: попробуйте метод .repeat()
+
+const symbol = ':)';
+let result = '';
+
+let count = 1;
+while (count <= 5) {
+    result += symbol.repeat(count) + '\n'
+    count++;
+}
+console.log(result)
