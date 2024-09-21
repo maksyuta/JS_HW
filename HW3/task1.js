@@ -73,13 +73,4 @@ let item_7_type
 item_7_type = typeof item7
 
 // 25. Вывести в консоль тип данных item_7 в виде ——  “item_7 == ”  item_7,  “item_7_type == ”  item_7_type ——
-console.log('item_7 == ' + item7 +',' + 'item_7_type == ' + item_7_type )
-
-// Task2*. Напишите программу, которая принимает целое положительное число n (одно любое число от 1 до 9), и выводит сумму равную
-// n + nn + nnn, где n не перемножаются, а конкатенируются
-const n = 5;
-const a1 = String(n);
-const a2 = String(n)+a1;
-const a3 = String(n)+a2
-console.log(+a1 + +a2 + +a3)
-
+console.log('item_7 == ' + item7 +',' + 'item_7_type == ' + item_7_type );
