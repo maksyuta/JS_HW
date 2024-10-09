@@ -35,12 +35,14 @@ console.log(addUnderline(sentence));
 //   - числа Фибоначчи (строка Фибоначчи) — числовая последовательность, первые два числа которой являются 0 и 1, а каждое последующее за ними число является суммой двух предыдущих
 //   - Например fibanacci(8) //21
 
-function fibanacci(n) {
-    if (n <= 1) {
-      return n;
+function fibonacci(n) {
+    if (n === 0) {
+        return 0;
+    } else if (n === 1 || n === 2) {
+        return 1;
     } else {
-      return fibanacci(n - 1) + fibanacci(n - 2);
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
-  }
+}
 
   console.log(fibanacci(8));
