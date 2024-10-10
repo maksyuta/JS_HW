@@ -3,7 +3,7 @@
 function isPolindrom(word){
     toLowerCaseWord = word.toLowerCase()
     const reverseWord = toLowerCaseWord.split('').reverse().join('')
-    return result = reverseWord === toLowerCaseWord ? `${word} - It is palindrom` : `${word} - It isn't palindrom` 
+    return reverseWord === toLowerCaseWord
 }
 console.log(isPolindrom('tenet'))
 
