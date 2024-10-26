@@ -7,11 +7,10 @@
 
 
 function countOccurrences(arr) {
-    const occurrences = {}
-        arr.map(number => {
-        occurrences[number] = occurrences[number] ? occurrences[number] + 1 : 1;
-    });
-    return occurrences
+    return arr.reduce((occurrences, number) => {
+        occurrences[number] = (occurrences[number] || 0) + 1;
+        return occurrences;
+    }, {});
 }
 
 console.log(countOccurrences(numbers));
