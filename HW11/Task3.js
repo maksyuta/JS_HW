@@ -49,11 +49,8 @@ class Employee {
         if(typeof newFirstName !== 'string') {
             throw new Error ("Invalid first name value")
         }
-        if(newFirstName.length < 2 || newFirstName.length > 50) {
-            throw new Error ("First name must contain between 2 and 50 characters.")
-        }
-        if (!/^[A-Za-z]+$/.test(newFirstName)) {
-            throw new Error("First name must contain only Latin letters.");
+        if (!/^[A-Za-z]{2,50}$/.test(newFirstName)) {
+            throw new Error("First name must contain only Latin letters and be 2 to 50 characters long.");
         }
         this._firstName = newFirstName
     }
@@ -66,11 +63,8 @@ class Employee {
         if(typeof newLastName !== 'string') {
             throw new Error ("Invalid last name value")
         }
-        if(newLastName.length < 2 || newLastName.length > 50) {
-            throw new Error ("First name must contain between 2 and 50 characters.")
-        }
-        if (!/^[A-Za-z]+$/.test(newLastName)) {
-            throw new Error("First name must contain only Latin letters.");
+        if (!/^[A-Za-z]{2,50}$/.test(newLastName)) {
+            throw new Error("First name must contain only Latin letters and be 2 to 50 characters long.");
         }
         this._lastName = newLastName
     }
@@ -220,11 +214,11 @@ class Company {
             Developer,
             Designer
         }
-        const ProfessionClass = professions[profession];
+        const professionClass = professions[profession];
         if(!ProfessionClass) {
             throw new Error(`Profession not found`);
         }
-        return this.#employees.filter((employee) => employee instanceof ProfessionClass)
+        return this.#employees.filter((employee) => employee instanceof professionClass)
     }
 
 }
