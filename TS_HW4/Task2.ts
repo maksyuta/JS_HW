@@ -2,7 +2,7 @@
 // Если значение не найдено, функция должна возвращать undefined.
 // Используйте keyof для типизации ключей объекта
 
-function getKeyByValue<T extends object, U>(obj: T, value: U): keyof T | undefined {
+function getKeyByValue<T extends object, U  extends T[keyof T]>(obj: T, value: U): keyof T | undefined {
     return Object.keys(obj).find((key) => obj[key as keyof T] === value) as keyof T;
 }
 

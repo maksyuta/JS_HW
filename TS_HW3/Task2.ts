@@ -17,5 +17,5 @@ function myMap<T, U>(array: T[], callback: MapCallback<T, U>): U[] {
 }
 
 const inputNumbers = [1, 2, 3, 4, 5];
-const mappedNumbers = myMap(inputNumbers, (value, index) => value * index);
+const mappedNumbers = myMap<number, number>(inputNumbers, (value, index) => value * index);
 console.log(mappedNumbers);

@@ -6,7 +6,7 @@
 //     const numberArray = wrapInArray(5); // [5]
 //     const stringArray = wrapInArray('Hello'); // ['Hello']
 
-    function wrapInArray<T>(arg: T) {
+    function wrapInArray<T>(arg: T): T[] {
         return [arg]
     }
 
